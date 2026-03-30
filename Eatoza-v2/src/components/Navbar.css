@@ -1,0 +1,146 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+}
+
+.logo {
+  color: #ef4f5f;
+  font-size: 28px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: -0.5px;
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-links li:hover {
+  color: #ef4f5f;
+  background: #fff0f2;
+}
+
+.nav-btn.outline {
+  border: 1.5px solid #333;
+  color: #333;
+}
+
+.nav-btn.outline:hover {
+  border-color: #ef4f5f;
+  color: #ef4f5f;
+  background: #fff0f2;
+}
+
+.nav-btn.filled {
+  background: #ef4f5f;
+  color: #fff !important;
+  border: none;
+}
+
+.nav-btn.filled:hover {
+  background: #d63c4e;
+  color: #fff !important;
+}
+
+.user-greeting {
+  color: #555;
+  font-weight: 500;
+  cursor: default;
+}
+
+.user-greeting:hover {
+  color: #555;
+  background: transparent;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar { padding: 14px 20px; }
+
+  .hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 16px 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    gap: 4px;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links li { padding: 12px 16px; border-radius: 8px; }
+}
+.cart-icon-btn {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px !important;
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ef4f5f;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

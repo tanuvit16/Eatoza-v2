@@ -1,0 +1,368 @@
+/* .featured-section {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.featured-header h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a1a;
+  font-family: 'Playfair Display', serif;
+}
+
+.featured-header p {
+  color: #888;
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.see-all-btn {
+  background: none;
+  border: 1.5px solid #ef4f5f;
+  color: #ef4f5f;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.see-all-btn:hover { background: #ef4f5f; color: #fff; }
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.r-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.r-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.13);
+}
+
+.r-card-img {
+  height: 160px;
+  background: linear-gradient(135deg, #fff0f2 0%, #ffe8ec 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.r-emoji { font-size: 64px; }
+
+.r-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+}
+
+.r-card-body { padding: 16px 18px; }
+
+.r-card-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.r-cuisine { color: #888; font-size: 13px; margin-bottom: 10px; }
+
+.r-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.r-rating { font-weight: 600; color: #2ecc71; }
+.r-dot { color: #ccc; }
+
+.r-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.r-price { font-size: 13px; color: #777; }
+
+.r-order-btn {
+  background: #ef4f5f;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.r-order-btn:hover { background: #d63c4e; }
+
+@media (max-width: 768px) {
+  .featured-section { padding: 40px 20px; }
+  .featured-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+} */
+
+
+
+
+.featured-section {
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 32px;
+}
+
+.featured-header h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: #1a1a1a;
+  font-family: 'Playfair Display', serif;
+}
+
+.featured-header p {
+  color: #888;
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.see-all-btn {
+  border: 1.5px solid #ef4f5f;
+  color: #ef4f5f;
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.see-all-btn:hover {
+  background: #ef4f5f;
+  color: #fff;
+}
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+.r-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.r-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.r-card-img {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.r-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.r-card:hover img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+/* TAG */
+.r-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+/* TEXT ON IMAGE */
+.image-info {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  color: #fff;
+}
+
+.image-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.image-info p {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* BODY */
+.r-card-body {
+  padding: 14px 16px;
+}
+
+.r-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.r-rating {
+  color: #2ecc71;
+  font-weight: 600;
+}
+
+.r-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.r-price {
+  font-size: 13px;
+  color: #777;
+}
+
+/* BUTTON */
+.r-order-btn {
+  background: linear-gradient(135deg, #ff4d5a, #ff7a7a);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.r-order-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 77, 90, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .featured-section {
+    padding: 40px 20px;
+  }
+
+  .featured-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+.loading-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.skeleton { animation: pulse 1.5s ease-in-out infinite; }
+
+.skeleton-img {
+  height: 160px;
+  background: #f0f0f0;
+  border-radius: 16px 16px 0 0;
+}
+
+.skeleton-body { padding: 16px; }
+
+.skeleton-line {
+  height: 14px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.skeleton-line.short { width: 60%; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #888;
+}
+
+.no-results p:first-child {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.r-delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 2;
+}
+
+.r-delete-btn:hover { background: #ef4f5f; }
