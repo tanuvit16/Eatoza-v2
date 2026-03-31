@@ -1,0 +1,140 @@
+.otp-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+  padding: 20px;
+}
+
+.otp-modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  animation: slideUp 0.3s ease;
+  font-family: 'DM Sans', sans-serif;
+}
+
+@keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.otp-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #f5f5f5;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.otp-close:hover { background: #ef4f5f; color: #fff; }
+
+.otp-icon { font-size: 48px; margin-bottom: 16px; }
+
+.otp-modal h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', serif;
+}
+
+.otp-modal p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.otp-email {
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 13px !important;
+  color: #555 !important;
+  margin-bottom: 20px !important;
+}
+
+/* OTP input boxes */
+.otp-inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.otp-input {
+  width: 48px;
+  height: 56px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: border 0.2s;
+  color: #1a1a1a;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.otp-input:focus { border-color: #ef4f5f; }
+.otp-input:not(:placeholder-shown) { border-color: #ef4f5f; background: #fff8f8; }
+
+.otp-error {
+  color: #ef4f5f !important;
+  font-size: 13px !important;
+  background: #fff0f2;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 12px !important;
+}
+
+.otp-timer {
+  color: #888 !important;
+  font-size: 13px !important;
+  margin-bottom: 16px !important;
+}
+
+.otp-btn {
+  width: 100%;
+  background: #ef4f5f;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 12px;
+}
+
+.otp-btn:hover:not(:disabled) { background: #d63c4e; }
+.otp-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.otp-resend {
+  background: none;
+  border: none;
+  color: #ef4f5f;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: underline;
+}

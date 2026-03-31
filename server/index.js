@@ -37,3 +37,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+const otpRoutes = require('./routes/otp');
+app.use('/api/otp', otpRoutes);
