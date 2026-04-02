@@ -33,7 +33,7 @@
 
 //   useEffect(() => {
 //     // Fetch restaurants
-//     fetch('http://localhost:5000/api/restaurants')
+//     fetch('${import.meta.env.VITE_API_URL}/api/restaurants')
 //       .then(r => r.json())
 //       .then(data => {
 //         if (data.success) {
@@ -44,7 +44,7 @@
 //       });
 
 //     // Fetch all orders
-//     fetch('http://localhost:5000/api/orders/all')
+//     fetch('${import.meta.env.VITE_API_URL}/api/orders/all')
 //       .then(r => r.json())
 //       .then(data => {
 //         if (data.success) {
@@ -58,7 +58,7 @@
 
 //   // const handleDeleteRestaurant = async (id, name) => {
 //   //   if (!window.confirm(`Delete "${name}"?`)) return;
-//   //   const res  = await fetch(`http://localhost:5000/api/restaurants/${id}`, { method: 'DELETE' });
+//   //   const res  = await fetch(`${import.meta.env.VITE_API_URL}/api/restaurants/${id}`, { method: 'DELETE' });
 //   //   const data = await res.json();
 //   //   if (data.success) setRestaurants(prev => prev.filter(r => r._id !== id));
 //   // };
@@ -71,12 +71,12 @@
 
 // const confirmDeleteRestaurant = async (id, name) => {
 //   if (!window.confirm(`Delete "${name}"?`)) return;
-//   const res  = await fetch(`http://localhost:5000/api/restaurants/${id}`, { method: 'DELETE' });
+//   const res  = await fetch(`${import.meta.env.VITE_API_URL}/api/restaurants/${id}`, { method: 'DELETE' });
 //   const data = await res.json();
 //   if (data.success) setRestaurants(prev => prev.filter(r => r._id !== id));
 // };
 //   // const handleUpdateOrderStatus = async (id, status) => {
-//   //   const res  = await fetch(`http://localhost:5000/api/orders/${id}/status`, {
+//   //   const res  = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${id}/status`, {
 //   //     method:  'PUT',
 //   //     headers: { 'Content-Type': 'application/json' },
 //   //     body:    JSON.stringify({ status }),
@@ -95,7 +95,7 @@
 // };
 
 // const confirmUpdateOrderStatus = async (id, status) => {
-//   const res  = await fetch(`http://localhost:5000/api/orders/${id}/status`, {
+//   const res  = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${id}/status`, {
 //     method:  'PUT',
 //     headers: { 'Content-Type': 'application/json' },
 //     body:    JSON.stringify({ status }),
@@ -350,7 +350,7 @@ const AdminPage = ({ navigate }) => {
     user?.emailAddresses?.[0]?.emailAddress === ADMIN_EMAIL;
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/restaurants')
+    fetch('${import.meta.env.VITE_API_URL}/api/restaurants')
       .then(r => r.json())
       .then(data => {
         if (data.success) {
@@ -360,7 +360,7 @@ const AdminPage = ({ navigate }) => {
         setLoadingR(false);
       });
 
-    fetch('http://localhost:5000/api/orders/all')
+    fetch(`${import.meta.env.VITE_API_URL}/api/orders/all`)
       .then(r => r.json())
       .then(data => {
         if (data.success) {
@@ -380,7 +380,7 @@ const AdminPage = ({ navigate }) => {
 
   const confirmDeleteRestaurant = async (id, name) => {
     if (!window.confirm(`Delete "${name}"?`)) return;
-    const res  = await fetch(`http://localhost:5000/api/restaurants/${id}`, { method: 'DELETE' });
+    const res  = await fetch(`${import.meta.env.VITE_API_URL}/api/restaurants/${id}`, { method: 'DELETE' });
     const data = await res.json();
     if (data.success) setRestaurants(prev => prev.filter(r => r._id !== id));
   };
@@ -392,7 +392,7 @@ const AdminPage = ({ navigate }) => {
   };
 
   const confirmUpdateOrderStatus = async (id, status) => {
-    const res  = await fetch(`http://localhost:5000/api/orders/${id}/status`, {
+    const res  = await fetch(`${import.meta.env.VITE_API_URL}/api/orders/${id}/status`, {
       method:  'PUT',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ status }),
