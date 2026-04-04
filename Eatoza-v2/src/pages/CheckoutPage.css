@@ -131,7 +131,6 @@
   margin-top: 10px;
 }
 
-/* Details */
 .user-info {
   background: #f8f8f8;
   border-radius: 10px;
@@ -171,7 +170,6 @@
 
 .address-field textarea:focus { border-color: #ef4f5f; }
 
-/* Payment */
 .payment-method { margin-bottom: 20px; }
 
 .payment-method h4 {
